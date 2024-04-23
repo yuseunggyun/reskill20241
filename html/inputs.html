@@ -1,18 +1,18 @@
 <form>
 <h3>이 설문은 수업의 참여도를 증진시키기 위해 만들어졌습니다</h3>
 1. 이름과 사번을 입력하시오.<br>
-<input type='text' placeholder='이름'>
+이름 : <input type='text' placeholder='홍길동' required>
 <br>
-<input type='text' placeholder='사번'>
+사번 : <input type='text' placeholder='B00000' required>
 <br><br>
 2. 나이는?
-<input type='text'>세
+<input type='number' min='1' max='99' required>세
 <br><br>
 3. 나의 최근 해외 여행 날짜
 <br>
-출발일 : <input type='date'>
+출발일 : <input type='date' required>
 <br>
-복귀일 : <input type='date'>
+복귀일 : <input type='date' required>
 <br><br>
 4. 나의 해외 여행 스타일<br>
 <input type='radio' name='travel' values='먹거리'>전쟁이 나도 하나라도 더 먹고 죽겠다(먹거리 탐방)<br>
@@ -29,5 +29,11 @@
 <input type='checkbox'> 태국 방콕
 <input type='checkbox'> 필리핀 세부
 <br><br>
-<input type='submit' name='submit'>
+6. 사은품 받을 연락처(선택사항)<br>
+<input type='tel' name='phone' pattern='[0-9]{3}-[0-9]{4}-[0-9]{4}'>
+<br><br>
+7. 이메일 주소를 입력 후 제출해주세요<br>
+<action='' method='post'>
+<input type='email' name='userID' required>
+<button type='submit'>제출</button>
 </form>
